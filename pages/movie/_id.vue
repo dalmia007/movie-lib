@@ -15,11 +15,11 @@
             <h2 class="text-2xl font-semibold">{{ data.title }}</h2>
           </div>
           <div>
-            <div>
-              {{ data.rating + '/100' }}
+            <div class="bg-yellow-400 max-w-max rounded-lg p-2 mb-1">
+              {{ data.rating }}
             </div>
-            <div class="text-lg text-gray-800">{{ data.director }}</div>
-            <div class="text-lg text-gray-800">{{ data.releaseDate }}</div>
+            <div class="text-lg mt-1">{{ data.director }}</div>
+            <div class="text-lg">{{ data.releaseDate }}</div>
           </div>
           <p class="text-gray-400 md:max-h-40 overflow-y-scroll">
             {{ data.synopsis }}
