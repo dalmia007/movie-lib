@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col justify-center items-center m-auto">
+  <div class="flex flex-col justify-center items-center m-auto md:h-screen">
     <MovieBanner :movies="data" />
   </div>
 </template>
