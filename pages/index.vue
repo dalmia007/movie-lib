@@ -1,25 +1,29 @@
 <template>
-  <div>
-    {{ data }}
+  <div class="flex flex-col justify-center items-center m-auto h-screen">
+    <MovieBanner :movies="data" />
   </div>
-  <!-- <Tutorial /> -->
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import MovieBanner from '~/components/MovieBanner.vue'
 
 export default Vue.extend({
   name: 'IndexPage',
+  components: {
+    MovieBanner,
+  },
   data() {
     return {
-      data: null,
+      data: [],
+      searchQuery: '',
     }
   },
-  mounted() {
+  created() {
     this.getMovies()
   },
   methods: {
-    getMovies() {
+    getMovies(): void {
       this.$axios
         .get(`https://6395ab63a68e43e418ee1a13.mockapi.io/movies`)
         .then((res) => {
