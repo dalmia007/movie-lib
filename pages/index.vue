@@ -1,6 +1,7 @@
 <template>
   <div class="flex flex-col justify-center items-center m-auto md:h-screen">
-    <MovieBanner :movies="data" />
+    <MovieBanner v-if="data.length" :movies="data" />
+    <h1 v-else>There are no movies in the database</h1>
   </div>
 </template>
 
