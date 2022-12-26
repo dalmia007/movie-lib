@@ -13,7 +13,9 @@
           </div>
           <div class="flex justify-between items-start">
             <h2 class="text-2xl font-semibold">{{ data.title }}</h2>
-            <unicon name="pen" fill="gray" class="scale-75"></unicon>
+            <n-link :to="`/movie/${data.id}/edit`">
+              <unicon name="pen" fill="gray" class="scale-75"></unicon>
+            </n-link>
           </div>
           <div>
             <div class="bg-yellow-400 max-w-max rounded-lg p-2 mb-1">
